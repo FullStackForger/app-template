@@ -7,10 +7,8 @@ export type AppConfig = {
 export function startServer({ app }:AppConfig): Express  {
 
   app.get('/', (_, res) => {
-    res.status(200).send('hello world')
+    res.status(200).send({ status: 'ok' })
   })
 
   return app
 }
-
-
