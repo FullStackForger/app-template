@@ -3,5 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "author": "Mark Bevels <mark.bevels@derived.studio>",
-  "license": "MIT"
+  "license": "MIT",
+  "scripts": {
+    "server": "esbuild-dev -w -s src/server/index"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "esbuild-dev": "^0.7.2"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
