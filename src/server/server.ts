@@ -1,5 +1,4 @@
-    import { Express } from 'express'
-
+import { Express } from 'express'
 
 export type AppConfig = {
     app: Express
@@ -7,12 +6,11 @@ export type AppConfig = {
 
 export function startServer({ app }:AppConfig): Express  {
 
+  app.get('/', (_, res) => {
+    res.status(200).send('hello world')
+  })
 
-    app.get('/', (_, res) => {
-        res.status(200).send('hello world')
-    })        
-
-    return app
+  return app
 }
 
 
